@@ -1,6 +1,8 @@
 
 body {
     padding-top: 200px;
+     background-color: #0FEC8E;
+     color:#D62A8F;
    /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
 }
 

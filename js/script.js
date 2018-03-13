@@ -25,6 +25,8 @@ $(".btn").click(function(){
                         <img src=' + response.data[randIndex].images.fixed_width.url + '/>\
                     </a>\
                 </div>'
+                
+                
             );
         },
     }); 
