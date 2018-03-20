@@ -12,6 +12,7 @@ $(".btn").click(function(){
     //X is the URL
     var x = "https://api.giphy.com/v1/gifs/search?q=" + ST + "&api_key=dc6zaTOxFJmzC";
     
+    
     $.ajax({
         url: x,
         method: "GET",
@@ -22,12 +23,16 @@ $(".btn").click(function(){
             $('.gallery').append(
                 '<div class="col-md-offset-4 col-md-4 thumb">\
                     <a class="thumbnail" href =' + response.data[randIndex].images.fixed_width.url + '>\
-                        <img src=' + response.data[randIndex].images.fixed_width.url + '/>\
+                        <img id="ImageOne"src=' + response.data[randIndex].images.fixed_width.url + '/>\
                     </a>\
                 </div>'
                 
                 
             );
         },
-    }); 
+    });
+    $("#ImageOne").click(function(ImageFunctionOne){
+        console.log('click');
+    $('.gallery').empty();
+    });
 });
